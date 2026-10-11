@@ -16,7 +16,6 @@ public class TorpedoStore {
 
   Random generator = new Random();
 
-
   public TorpedoStore(int numberOfTorpedos){
     this.torpedoCount = numberOfTorpedos;
 
@@ -33,7 +32,7 @@ public class TorpedoStore {
 
   public boolean fire(int numberOfTorpedos){
     if(numberOfTorpedos < 1 || numberOfTorpedos > this.torpedoCount){
-      throw new IllegalArgumentException("numberOfTorpedos");
+      throw new IllegalArgumentException("numberOfTorpedos"); // There are no torpedos to fire or the Store is not have enough.
     }
 
     boolean success = false;
